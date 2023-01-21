@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>OpenAI Quickstart</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dog.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="http://localhost:5000/" style="padding: 7px 4px;"><img src="{{ url_for('static', filename='dog.png') }}" class="icon" /></a>
+    <a href="http://localhost:5000/">Home</a>
+    <a class="active"  href="#">Ask a Question</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  <h3>Name my pet</h3>
+  <form action="http://localhost:5000/answer" method="post">
+    <input type="text" name="ques" placeholder="What Question Do You Have?" required />
+    <input type="submit" value="submit" />
+  </form>
+  
+
+  <form action="http://localhost:5000/worksheet" method="post" style="margin-top:24px;">
+    <input type="text" name="ws" placeholder="What should the worksheet be about?" required />
+    <input type="submit" value="submit" />
+  </form>
+
+  <form action="http://localhost:5000/handout" method="post" style="margin-top:24px;">
+    <input type="text" name="hout" placeholder="What should the handout be about?" required />
+    <input type="submit" value="submit" />
+  </form>
+
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %} 
+  
+  
+</body>
