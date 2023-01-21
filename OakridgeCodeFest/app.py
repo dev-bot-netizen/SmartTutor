@@ -4,7 +4,7 @@ import openai
 from flask import Flask, redirect, render_template, request, url_for, send_file
 from unicodedata import *
 
-openai.api_key = "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"
+openai.api_key = "censored"
 #extra personality things
 #cache 
 
