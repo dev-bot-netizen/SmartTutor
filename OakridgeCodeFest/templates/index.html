@@ -13,11 +13,11 @@
     <a href="http://localhost:5000/" style="padding: 7px 4px;"><img src="{{ url_for('static', filename='dog.png') }}" class="icon" /></a>
     <a class="active" href="http://localhost:5000/">Home</a>
     <a href="http://localhost:5000/question">Ask a Question</a>
-    <a href="#contact">Contact</a>
+    <a href="http://localhost:5000/display">Worksheets</a>
     <a href="#about">About</a>
   </div>
 
-<form action="http://localhost:5000/answer" method="post">
+<form action="http://localhost:5000/personality" method="POST">
   <input type="text" name="name" placeholder="What is your name?" required/>
   <input type="text" name="sex" placeholder="What is your gender?" required/>
   <input type="text" name="grade" placeholder="What is your grade?" required/>

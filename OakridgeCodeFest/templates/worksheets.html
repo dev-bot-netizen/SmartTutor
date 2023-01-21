@@ -1,25 +1,46 @@
 <!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
 <head>
-  <title>OpenAI Quickstart</title>
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
-  />
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop or Browse: File Upload | CodingNepal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-
 <body>
   <div class="topnav">
     <a href="http://localhost:5000/" style="padding: 7px 4px;"><img src="{{ url_for('static', filename='dog.png') }}" class="icon" /></a>
-    <a class="active" href="http://localhost:5000/">Home</a>
+    <a href="http://localhost:5000/">Home</a>
     <a href="http://localhost:5000/question">Ask a Question</a>
-    <a href="#contact">Contact</a>
+    <a class="active" href="http://localhost:5000/display">Worksheets</a>
     <a href="#about">About</a>
   </div>
+  <div class="drag-area">
+    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+    <input type="file">
+  </div>
+  <form class="under-area">
+    <input type="submit" value="Submit Assignement"/>
+  </form>
 
-<form action="http://localhost:5000/answer" method="post">
-  <input type="file" />
-</form>
-  
+  <script src="script.js"></script>
+  <iframe src="{{ url_for('static', filename='Mat.pdf') }}"height="700px" width="700px" style="position: absolute;left:300px;">"></iframe>
+
+  <table style="position: absolute; left: 0px;">
+    <tr>
+      <th><a href="{{ url_for('static', filename='Mat.pdf') }}" download="Math.pdf">Math.Pdf</a></th>
+    </tr>
+    <tr>
+      <th><a href="{{ url_for('static', filename='Mat.pdf') }}" download="Math.pdf">Math.Pdf</a></th>
+    </tr>
+    <tr>
+      <th><a href="{{ url_for('static', filename='Mat.pdf') }}" download="Math.pdf">Math.Pdf</a></th>
+    </tr>
+    <tr>
+      <th><a href="{{ url_for('static', filename='Mat.pdf') }}" download="Math.pdf">Math.Pdf</a></th>
+    </tr>
+  </table>
 </body>
-<a href="https://www.flaticon.com/free-icons/address-book" title="address book icons">Address book icons created by Pixel perfect - Flaticon</a>
+</html>
+

@@ -65,20 +65,20 @@ input[type="submit"] {
   margin-top: 40px;
 }
 .topnav {
-  background-color: #ffffff;
+  background-color: #dbdbdb;
   overflow: auto;
   top: 0;
   width: 100%;
   position: fixed;
   display: flex;
-  border-bottom: 1px solid #ececf1;
+  border-bottom: 1px solid #dbdbdb;
   
 }
 
 /* Style the links inside the navigation bar */
 .topnav a{
   float: left;
-  color: rgb(148, 148, 148);
+  color: #5e6872;
   text-align: center;
   padding: 14px 14px;
   font-size: 17px;
@@ -99,4 +99,66 @@ input[type="submit"] {
   color: #10a27e;
   padding: 14px 16px;
 
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #FC9e4f;
+}
+.drag-area{
+  position: absolute;
+  right:0px;
+  top:0px;
+  margin-top: 64.3px;
+  margin-right: 16px;
+  border: 20px dashed #ffffff92;
+  height: 600px;
+  width: 400px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area.active{
+  border: 2px solid #10a27e;
+}
+.drag-area .icon{
+  font-size: 100px;
+  color: #fff;
+}
+.drag-area header{
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.drag-area span{
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.under-area{
+  position: absolute;
+  right:0px;
+  bottom:0px;
+  margin-bottom: 64.3px;
+  margin-right: 16px;
+  width: 400px;
 }
