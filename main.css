@@ -45,7 +45,7 @@ input[type="text"] {
   padding: 12px 16px;
   border: 1px solid #10a37f;
   border-radius: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 5px;
 }
 ::placeholder {
   color: #8e8ea0;
@@ -63,4 +63,40 @@ input[type="submit"] {
 .result {
   font-weight: bold;
   margin-top: 40px;
+}
+.topnav {
+  background-color: #ffffff;
+  overflow: auto;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  border-bottom: 1px solid #ececf1;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a{
+  float: left;
+  color: rgb(148, 148, 148);
+  text-align: center;
+  padding: 14px 14px;
+  font-size: 17px;
+}
+.topnav img{
+  float: left;
+  height: 38px;
+  width: 40px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: #10a27e;
+  padding: 14px 16px;
+
 }
