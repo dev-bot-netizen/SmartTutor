@@ -7,7 +7,7 @@ from fileinput import filename
 import re
 import math
 
-openai.api_key = "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"
+openai.api_key = "**********************"
 global user
 user = ''
 
