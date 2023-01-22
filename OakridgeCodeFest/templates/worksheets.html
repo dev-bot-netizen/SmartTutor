@@ -2,11 +2,16 @@
 <!-- Created By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
 <head>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='dog.png') }}"
+    />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag & Drop or Browse: File Upload | CodingNepal</title>
+    <title>Smart Tutor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
 </head>
 <body>
   <div class="topnav">
@@ -15,32 +20,18 @@
     <a href="http://localhost:5000/question">Ask a Question</a>
     <a class="active" href="http://localhost:5000/display">Worksheets</a>
     <a href="#about">About</a>
+    <a href="" style = "position: absolute; right: 0;margin-right:10px ; ">Score:{{ score }}</a>
   </div>
   <div class="drag-area">
     <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-    <input type="file">
   </div>
-  <form class="under-area">
+  <form class="under-area" method = "post" action = "http://localhost:5000/submit" enctype="multipart/form-data">
+    <input type="file" name = "file" required/>
     <input type="submit" value="Submit Assignement"/>
+    
   </form>
 
-  <script src="script.js"></script>
-  <iframe src="{{ url_for('static', filename='Mat.pdf') }}"height="700px" width="700px" style="position: absolute;left:300px;">"></iframe>
 
-  <table style="position: absolute; left: 0px;">
-    <tr>
-      <th><a href="{{ url_for('static', filename='Mat.pdf') }}" download="Math.pdf">Math.Pdf</a></th>
-    </tr>
-    <tr>
-      <th><a href="{{ url_for('static', filename='Mat.pdf') }}" download="Math.pdf">Math.Pdf</a></th>
-    </tr>
-    <tr>
-      <th><a href="{{ url_for('static', filename='Mat.pdf') }}" download="Math.pdf">Math.Pdf</a></th>
-    </tr>
-    <tr>
-      <th><a href="{{ url_for('static', filename='Mat.pdf') }}" download="Math.pdf">Math.Pdf</a></th>
-    </tr>
-  </table>
 </body>
 </html>
 

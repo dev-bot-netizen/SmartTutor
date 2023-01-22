@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>OpenAI Quickstart</title>
+  <title>Smart Tutor</title>
   <link
     rel="shortcut icon"
     href="{{ url_for('static', filename='dog.png') }}"
@@ -16,6 +16,7 @@
     <a class="active"  href="#">Ask a Question</a>
     <a href="http://localhost:5000/display">Worksheets</a>
     <a href="#about">About</a>
+    <a href="" style = "position: absolute; right: 0;margin-right:10px ; ">Score:{{ score }}</a>
   </div>
   <h3>Smart Tutor</h3>
   <form action="http://localhost:5000/answer" method="post">
